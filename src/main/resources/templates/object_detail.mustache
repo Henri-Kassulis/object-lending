@@ -1,0 +1,46 @@
+
+<div class="row">
+   <div class="img-fluid col-sm-8 col-md-6">
+      <img class="img-fluid"  src="/image/{{id}}"/>
+   </div>
+
+   <div class="img-fluid col-sm-4  col-md-2">
+      <dl>
+
+         {{#description}}
+             <dt>Beschreibung</dt>
+             <dd>{{description}}</dd>
+         {{/description}}
+
+         <dt>Kontakt</dt>
+         <dd>{{contact}}</dd>
+
+         <dt>Breitengrad</dt>
+         <dd>{{latitude}}</dd>
+
+         <dt>Längengrad</dt>
+         <dd>{{longitude}}</dd>
+
+      </dl>
+   </div>
+
+   <div class="img-fluid col-sm-12 col-md-4">
+      <div id='map-id' style="height: 600px; max-width: 1400px;"></div>
+   </div>
+</div>
+
+
+<script type="text/javascript">
+	var latitude = {{latitude}};
+	var longitude = {{longitude}};
+	var zoom = 17;
+	var mymap = L.map('map-id').setView([ latitude, longitude ], zoom);
+
+	L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+					{
+						maxZoom : 22,
+						attribution : 'Map data <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+					}).addTo(mymap);
+
+	L.marker([ latitude, longitude ]).addTo(mymap);
+</script>

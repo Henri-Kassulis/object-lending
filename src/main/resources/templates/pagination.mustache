@@ -1,0 +1,11 @@
+<ul class="pagination">
+   {{#pagination}}
+       {{#pages}}
+       <li  class="page-item {{#active}}active{{/active}}"  >
+           <a class="page-link" href="{{url}}?page={{page}}">
+           {{page}}
+           </a>
+       </li>
+       {{/pages}}
+   {{/pagination}}
+</ul>

@@ -1,0 +1,27 @@
+<table class="table">
+
+  <tr>
+   <th scope="col">Bild</th>
+   <th scope="col">Name</th>
+   {{#hasDistance}}
+     <th scope="col">Entfernung</th>
+   {{/hasDistance}}
+  </tr>
+
+  {{#results}}
+    <tr>
+	  {{#object}}
+     <td>
+		 <img src="/image/{{id}}" width="200px" />
+     </td>
+     <td><a href="/object/{{id}}">{{name}}</a></td>
+	 {{/object}}
+
+     {{#hasDistance}}
+       <td>{{distance}}</td>
+     {{/hasDistance}}
+
+    </tr>
+  {{/results}}
+
+</table>

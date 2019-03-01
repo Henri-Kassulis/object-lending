@@ -1,0 +1,28 @@
+#tiles-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: stretch;
+   max-width: 1400px;
+   margin: auto;
+}
+
+#tiles-container>a {
+   margin: 5px;
+   max-width: 10em;
+   word-break: break-all;
+}
+
+#tiles-container>a>div {
+   width: 10em;
+   height: 10em;
+   display: flex;
+   align-items: center;
+}
+
+img {
+   display: block;
+   margin: auto;
+   max-width: 10em;
+   max-height: 10em;
+}

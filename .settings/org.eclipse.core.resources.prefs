@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/resources/templates/add_object.mustache=UTF-8
+encoding//src/main/resources/templates/edit_profile.mustache=UTF-8
+encoding//src/main/resources/templates/index.mustache=UTF-8
+encoding//src/main/resources/templates/navigation.mustache=UTF-8
+encoding//src/main/resources/templates/object_detail.mustache=UTF-8
+encoding//src/main/resources/templates/register.mustache=UTF-8
+encoding//src/main/resources/templates/search.mustache=UTF-8
+encoding//src/main/resources/templates/user_objects.mustache=UTF-8
+encoding/<project>=UTF-8

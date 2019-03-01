@@ -1,0 +1,11 @@
+{{>pagination}}
+<div id="tiles-container">
+   {{#objects}}
+   <a href="/object/{{id}}">
+      <div>
+         <img src="/image/{{id}}" />
+      </div>
+      {{name}}
+   </a>
+   {{/objects}}
+</div>

@@ -1,0 +1,7 @@
+/* center image
+   https://stackoverflow.com/questions/11856150/css-to-center-a-image-horizontally
+*/
+img {
+	margin: 0 auto;
+	display: block;
+}
