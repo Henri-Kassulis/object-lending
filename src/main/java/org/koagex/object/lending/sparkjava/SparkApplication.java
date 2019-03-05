@@ -92,6 +92,7 @@ public class SparkApplication {
 		int httpPort = 80;
 		int port = keystoreExists ? httpsPort : httpPort;
 		Spark.port(port);
+		LOGGER.info("port: " + port);
 
 		setStaticFileLocation(runInDeveloperWorkspace);
 
@@ -378,7 +379,7 @@ public class SparkApplication {
 		final Map<String, String> map = new HashMap<>();
 
 		ModelAndView content = new ModelAndView(map, "index.mustache");
-		return wrapInBaseHtml("Index", content, request, response);
+		return wrapInBaseHtml("OBLE", content, request, response);
 	}
 
 	@SuppressWarnings("unchecked")
