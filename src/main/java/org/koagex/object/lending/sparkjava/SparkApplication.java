@@ -231,6 +231,18 @@ public class SparkApplication {
 			return res;
 		});
 
+		get("/thumbnail/:" + PARAM_OBJECT_ID, (req, res) -> {
+			int id = getObjectId(req);
+			byte[] image = database.getObjectThumbnail(id);
+			image = image == null ? database.getObjectImage(id) : image;
+			if (image != null) {
+				ServletOutputStream outputStream = res.raw().getOutputStream();
+				outputStream.write(image);
+				res.type("image/jpeg");
+			}
+			return res;
+		});
+
 		get("/object/:" + PARAM_OBJECT_ID, (req, res) -> {
 			int id = getObjectId(req);
 			return objectDetail(id, req, res);

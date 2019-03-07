@@ -488,9 +488,36 @@ public class Database {
 
 	}
 
+	public byte[] getObjectImage(int objectId) {
+		return dbi.withHandle(handle -> {
+			return handle.createQuery("select image from object where id = :id")//
+					.bind("id", objectId)//
+					.map((i, rs, ctx) -> blobToImageBytes(rs.getBlob("image")))//
+					.first();
+		});
+	}
+
 	public void setObjectImage(int id, byte[] image) {
 		LOGGER.debug("image size: {}", image.length);
 		dbi.useHandle(handle -> handle.update("update object set image = ? where id = ? ", image, id));
+
+		int maxSize = 300;
+		byte[] smallBytes = ImageResizer.resizeImage(image, maxSize);
+		setObjectThumbnail(id, smallBytes);
+	}
+
+	public byte[] getObjectThumbnail(int objectId) {
+		return dbi.withHandle(handle -> {
+			return handle.createQuery("select thumbnail from object where id = :id")//
+					.bind("id", objectId)//
+					.map((i, rs, ctx) -> blobToImageBytes(rs.getBlob("thumbnail")))//
+					.first();
+		});
+	}
+
+	private void setObjectThumbnail(int id, byte[] image) {
+		LOGGER.debug("image size: {}", image.length);
+		dbi.useHandle(handle -> handle.update("update object set thumbnail = ? where id = ? ", image, id));
 	}
 
 	private void insert(String statement, java.lang.Object... args) {
@@ -509,23 +536,14 @@ public class Database {
 		);
 	}
 
-	public byte[] getObjectImage(int objectId) {
-		return dbi.withHandle(handle -> {
-			return handle.createQuery("select image from object where id = :id")//
-					.bind("id", objectId)//
-					.map((i, rs, ctx) -> {
-						Blob imageBlob = rs.getBlob("image");
-						byte[] image;
-						if (imageBlob == null) {
-							image = null;
-						} else {
-							image = imageBlob.getBytes(0, (int) imageBlob.length());
-							LOGGER.debug("loaded image size:" + image.length);
-						}
-						return image;
-					})//
-					.first();
-		});
+	private byte[] blobToImageBytes(Blob imageBlob) throws SQLException {
+		byte[] image;
+		if (imageBlob == null) {
+			image = null;
+		} else {
+			image = imageBlob.getBytes(0, (int) imageBlob.length());
+		}
+		return image;
 	}
 
 	public void deleteObject(int objectId) {
