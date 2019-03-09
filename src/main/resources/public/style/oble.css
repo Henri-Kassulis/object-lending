@@ -1,11 +1,24 @@
 h1 {
-	margin: 25px 0px 10px;
+   margin: 25px 0px 10px;
 }
 
 h2 {
-	margin: 20px 0px 8px;
+   margin: 20px 0px 8px;
 }
 
-a.btn {
+.btn {
    margin: 3px;
+   min-width: 120px;
+}
+
+.btn.file {
+   display: block;
+}
+
+.row {
+   margin-bottom: 30px;
+}
+
+.my-object-name {
+   margin: 5px 0px;
 }

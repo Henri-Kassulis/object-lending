@@ -15,14 +15,16 @@
       <input type="text" name="tags" id="tags" class="form-control" value="{{tags}}" />
    </div>
 
-   <div class="form-group">
-      <label>Bild</label>
-      <img src="/image/{{id}}" />
-   </div>
+   <div class="row">
+       <div class="form-group">
+          <label>Bild</label>
+          <img class="img-fluid" src="/thumbnail/{{id}}" />
+       </div>
 
-   <div class="form-group">
-      <label for="description">Neues Bild</label>
-      <input type='file' name='file' accept='.png,.jpg,.jpeg' />
+       <div class="form-group">
+          <label for="description">Neues Bild</label>
+          <input type='file' name='file' accept='.png,.jpg,.jpeg'  class="btn btn-outline-primary file"/>
+       </div>
    </div>
 
    <input type="submit" name="submit" value="Speichern" class="btn btn-primary" />

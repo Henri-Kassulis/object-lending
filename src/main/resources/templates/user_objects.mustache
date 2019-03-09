@@ -1,24 +1,16 @@
-<table class="table">
 
-	<tr>
-		<th scope="col">Bild</th>
-		<th scope="col">Name</th>
-		<th scope="col">Aktionen</th>
-	</tr>
-
-	{{#objects}}
-	<tr>
-		<td> <img src="/thumbnail/{{id}}" width="200px" /> </td>
-		<td>{{name}}</td>
-		<td>
-			<form action="/edit_object/{{id}}" method="GET">
-				<input type="submit" name="submit" value="Bearbeiten" class="btn btn-warning" />
-			</form>
-			<form action="/delete_object/{{id}}" method="POST">
-				<input type="submit" name="submit" value="Löschen" class="btn btn-danger" />
-			</form>
-		</td>
-	</tr>
-	{{/objects}}
-
-</table>
+{{#objects}}
+<div class="row">
+    <div class="col-sm col-md-4"> <img class="img-fluid" src="/thumbnail/{{id}}"  /> </div>
+    <div class="my-object-name col-sm">{{name}}</div>
+    <div class="col-sm col-md-2">
+        <form action="/edit_object/{{id}}" method="GET">
+            <input type="submit" name="submit" value="Bearbeiten" class="btn btn-warning" />
+        </form>
+        <form action="/delete_object/{{id}}" method="POST">
+            <input type="submit" name="submit" value="Löschen" class="btn btn-danger" />
+        </form>
+    </div>
+</div>
+<hr>
+{{/objects}}
