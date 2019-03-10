@@ -10,7 +10,6 @@
 #tiles-container>a {
    margin: 5px;
    max-width: 10em;
-   word-break: break-all;
 }
 
 #tiles-container>a>div {
