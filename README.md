@@ -1,31 +1,29 @@
-# Object Lending ( OBLE )
+# Objekt Leihe ( OBLE )
 
-Most people have lots of items in their homes.
-Many are rarely used.
+Die meisten Menschen haben etliche Gegenstände in ihren Wohnungen.
+Viele davon werden selten oder gar nicht genutzt.
 
 OBLE is a platform for lending objects.
 
-**advantages of lending**
-- saves money and space
-- connect to neighbors
-- good for the environment
+**Vorteile des (Ver)Leihens**
+- Gut für die Umwelt
+- Spart Geld und Platz
+- Kontakt zu netten Nachbarn
 
-## Why OBLE?
-- No advertisement
-- No platform fees
-- Free Software
-- Self hosting
-- Login only required for offering objects
+## Warum OBLE?
+- Keine Werbung
+- Keine Plattformgebühren
+- Freie Software 
+- Städte/Regionen können selbst ein OBLE betreiben
+- Ausleihen ist ohne Registrierung möglich
+- Tags anstatt Kategorien
 
-## Similar Platforms
-- [frents](http://frents.com) (Ads)
-- [FAIR LEIHEN](http://fairleihen.de) (Only regional in Berlin)
-- [depot Leipzig](http://depot-leipzig.de) (Only regional in Leipzig)
-- [Pumpipumpe](http://pumpipumpe.ch) (no concrete object images)
-- [dingsda](http://dingsda.org/) (in development)
-- [cosum](http://www.cosum.de/) (in development)
-- [Commons Booking](https://www.wielebenwir.de/projekte/commons-booking) (focuses on single object)
- 
- 
-## decisions
-Images are mandatory
+## Ähnliche Plattformen
+- [frents](http://frents.com) (Werbung)
+- [FAIR LEIHEN](http://fairleihen.de) (nur Berlin)
+- [depot Leipzig](http://depot-leipzig.de) (nur Leipzig)
+- [Pumpipumpe](http://pumpipumpe.ch) (keine konkreten Objektbilder)
+- [dingsda](http://dingsda.org/) (in Entwicklung)
+- [cosum](http://www.cosum.de/) (in Entwicklung)
+- [Commons Booking](https://www.wielebenwir.de/projekte/commons-booking) (Konzentriert auf einzelne Objekte wie Lastenräder)
+
