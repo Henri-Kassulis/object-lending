@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="navbar-nav">
 
+		<a href="/" class="nav-item nav-link navbar-right">OBLE</a>
 		<a href="/all_objects" class="nav-item nav-link navbar-right">Objekte</a>
 		<a href="/search" class="nav-item nav-link">Suche</a>
 
@@ -16,8 +17,8 @@
 	<div class="navbar-nav ml-auto">
 
 		{{#not_logged_in}}
-		<a href="/login" class="nav-item nav-link">   <span class="glyphicon glyphicon-log-in"></span>Einloggen</a>
-		<a href="/register" class="nav-item nav-link"><span class="glyphicon glyphicon-user">  </span>Registrieren</a>
+		<a href="/login" class="nav-item nav-link">Einloggen</a>
+		<a href="/register" class="nav-item nav-link">Registrieren</a>
 		{{/not_logged_in}} 
 
 		{{#logged_in}} 
