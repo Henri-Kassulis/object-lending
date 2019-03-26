@@ -4,7 +4,6 @@ https://www.w3schools.com/howto/howto_js_autocomplete.asp
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
-  display: inline-block;
 }
 
 
